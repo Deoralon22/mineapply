@@ -52,9 +52,10 @@
 	  </div>
 	  			<form method="POST">
 	  				{{ csrf_field() }}<center>
-	  				<button type="submit" class="btn green accent-4">Yes, that's me</button>
-	  				</center>
+	  				<button type="submit" class="btn green accent-4">Yes, proceed</button>
 	  			</form>
+
+	  				</center>
 	  @endif
 		
 	</div>
