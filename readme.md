@@ -11,3 +11,7 @@ Planned features for 1.0:
 - Users can view their application status using a token sent by e-mail
 - E-mail notification when an application is approved or denied
 
+## Screenshots
+
+![Welcome page](https://i.imgur.com/h4gb0GG.png)
+The welcome page.
