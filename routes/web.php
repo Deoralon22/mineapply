@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/check/{username}', 'ApplicationController@checkPage')->name('application-username');
+Route::post('/form', 'ApplicationController@formPage')->name('application-form');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
