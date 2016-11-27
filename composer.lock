@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ed9df8b872992035f068a7fe461a635a",
-    "content-hash": "76036da3b5b55b91dbe1e1affa01bf9e",
+    "hash": "c140c8017f7217f4049bb93d1522abae",
+    "content-hash": "9388e9a0c50b63d8fd7c626bd02aaea4",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -305,6 +305,61 @@
                 "tokenizer"
             ],
             "time": "2015-12-05 17:17:57"
+        },
+        {
+            "name": "juggl/minecraft",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jugglio/Minecraft.git",
+                "reference": "e5afeeea08fe0f27ad51ae8cb8d288b2f178c070"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jugglio/Minecraft/zipball/e5afeeea08fe0f27ad51ae8cb8d288b2f178c070",
+                "reference": "e5afeeea08fe0f27ad51ae8cb8d288b2f178c070",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "illuminate/support": "~5.1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Juggl\\Minecraft\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sven Luijten",
+                    "email": "svenluijten@outlook.com",
+                    "homepage": "http://svenluijten.com"
+                }
+            ],
+            "description": "Laravel wrapper for Mojang's Minecraft API",
+            "homepage": "https://github.com/svenluijten/Minecraft",
+            "keywords": [
+                "Mojang",
+                "api",
+                "minecraft"
+            ],
+            "abandoned": "sven/minecraft-php",
+            "time": "2015-10-03 20:11:13"
         },
         {
             "name": "laravel/framework",
@@ -638,6 +693,56 @@
                 "schedule"
             ],
             "time": "2016-01-26 21:23:30"
+        },
+        {
+            "name": "nategood/httpful",
+            "version": "0.2.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nategood/httpful.git",
+                "reference": "c1cd4d46a4b281229032cf39d4dd852f9887c0f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nategood/httpful/zipball/c1cd4d46a4b281229032cf39d4dd852f9887c0f6",
+                "reference": "c1cd4d46a4b281229032cf39d4dd852f9887c0f6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Httpful": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nate Good",
+                    "email": "me@nategood.com",
+                    "homepage": "http://nategood.com"
+                }
+            ],
+            "description": "A Readable, Chainable, REST friendly, PHP HTTP Client",
+            "homepage": "http://github.com/nategood/httpful",
+            "keywords": [
+                "api",
+                "curl",
+                "http",
+                "requests",
+                "rest",
+                "restful"
+            ],
+            "time": "2015-10-26 16:11:30"
         },
         {
             "name": "nesbot/carbon",
@@ -985,6 +1090,51 @@
                 "uuid"
             ],
             "time": "2016-11-22 19:21:44"
+        },
+        {
+            "name": "sven/minecraft-php",
+            "version": "v0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/svenluijten/minecraft-php.git",
+                "reference": "52a343e1e7c1f99202efbc386ab29c21c6d96c15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/svenluijten/minecraft-php/zipball/52a343e1e7c1f99202efbc386ab29c21c6d96c15",
+                "reference": "52a343e1e7c1f99202efbc386ab29c21c6d96c15",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.1",
+                "nategood/httpful": "^0.2",
+                "php": "^5.5 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sven\\Minecraft\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sven Luijten",
+                    "email": "svenluijten@outlook.com",
+                    "homepage": "https://svenluijten.com"
+                }
+            ],
+            "description": "A fluent wrapper around Mojang's Minecraft API.",
+            "homepage": "https://github.com/svenluijten/minecraft-php",
+            "keywords": [
+                "Mojang",
+                "api",
+                "minecraft"
+            ],
+            "time": "2016-03-24 08:28:18"
         },
         {
             "name": "swiftmailer/swiftmailer",
