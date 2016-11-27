@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Application;
 
+use App\Mail\ApplicationReceived;
+use Illuminate\Support\Facades\Mail;
+
 use Cache;
 use Carbon\Carbon;
 
@@ -76,7 +79,10 @@ class ApplicationController extends Controller
 
     	$application->save();
 
+    	Mail::to($application->email)->send(new ApplicationReceived($application));
+    	
     	return redirect(route('application-success'));
+
 
     }
 
