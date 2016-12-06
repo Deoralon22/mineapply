@@ -70,9 +70,9 @@ class ApplicationController extends Controller
     		], []);
 
     	$application = new Application;
-    	
+
     	$application->username = $user->get()->name;
-    	$application->username = $user->get()->uuid;
+    	$application->uuid = $user->get()->uuid;
     	$application->email = $request->email;
     	$application->message = $request->message;
 
