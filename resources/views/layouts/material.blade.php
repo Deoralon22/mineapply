@@ -18,7 +18,7 @@
         <li><a href="#" class="black-text"><i class="material-icons left">arrow_back</i> Return</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#" class="black-text">Check application status</a></li>
+        <li><a href="{{ route('application-status-form') }}" class="black-text">Check application status</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">

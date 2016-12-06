@@ -21,6 +21,10 @@ Route::get('/form/{username}', 'ApplicationController@formPage')->name('applicat
 Route::post('/form/{username}', 'ApplicationController@form');
 Route::get('/success', 'ApplicationController@success')->name('application-success');
 
+Route::get('/status', 'ApplicationController@statusPage')->name('application-status-form');
+Route::post('/status', 'ApplicationController@statusPost');
+Route::get('/status/{token}', 'ApplicationController@status')->name('application-status');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

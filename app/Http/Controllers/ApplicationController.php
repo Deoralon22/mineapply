@@ -82,11 +82,25 @@ class ApplicationController extends Controller
     	Mail::to($application->email)->send(new ApplicationReceived($application));
     	
     	return redirect(route('application-success'));
-
-
     }
 
     public function success() {
     	return view('application.success');
+    }
+
+    public function statusPage() {
+        return view('application.status_form');
+    }
+
+    public function statusPost(Request $request) {
+        if(is_null($request->token)) {
+            abort(500, 'No token specified');
+        }
+        return redirect('/status/'.$request->token);
+    }
+
+    public function status($token) {
+        $application = Application::where('token', $token)->firstOrFail();
+        return view('application.status')->with('application', $application);
     }
 }
