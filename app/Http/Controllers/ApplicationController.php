@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Application;
 
+use App\Mail\ApplicationReceived;
+use Illuminate\Support\Facades\Mail;
+
 use Cache;
 use Carbon\Carbon;
 
@@ -39,11 +42,6 @@ class ApplicationController extends Controller
     public function checkPage($username) {
 
     	$user = $this->checkUsername($username);
-
-    	if($user->get() != null) {
-    		return redirect('/form/'.$user->get()->name);
-    	} 
-
     	return view('application.check')->with('user', $user)->with('username', $username);
     }
 
@@ -58,7 +56,7 @@ class ApplicationController extends Controller
     }
 
     public function form(Request $request, $username) {
-    	
+
     	$user = $this->checkUsername($username);
     	if($user->get() == null) {
     		return redirect('/check/!');
@@ -74,11 +72,21 @@ class ApplicationController extends Controller
     	$application->username = $user->get()->name;
     	$application->uuid = $user->get()->uuid;
     	$application->email = $request->email;
+    	$application->ip = $request->ip();
+    	$application->status = 0; // Pending
     	$application->message = $request->message;
+    	$application->token = str_random(15);
 
     	$application->save();
 
-    	return $application;
+    	Mail::to($application->email)->send(new ApplicationReceived($application));
+    	
+    	return redirect(route('application-success'));
 
+
+    }
+
+    public function success() {
+    	return view('application.success');
     }
 }

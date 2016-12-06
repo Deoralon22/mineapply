@@ -20,9 +20,10 @@ class CreateApplicationsTable extends Migration
             $table->string('ip');
             $table->string('email');
             $table->text('message');
-            $table->integer('status');
-            $table->text('staff_message');
-            $table->dateTime('decided_at');
+            $table->string('token');
+            $table->integer('status')->default(0);
+            $table->text('staff_message')->nullable();
+            $table->dateTime('decided_at')->nullable();
             $table->timestamps();
         });
     }

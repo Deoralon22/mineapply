@@ -19,6 +19,7 @@ Route::get('/check/{username}', 'ApplicationController@checkPage')->name('applic
 
 Route::get('/form/{username}', 'ApplicationController@formPage')->name('application-form');
 Route::post('/form/{username}', 'ApplicationController@form');
+Route::get('/success', 'ApplicationController@success')->name('application-success');
 
 Auth::routes();
 

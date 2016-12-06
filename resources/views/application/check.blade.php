@@ -50,7 +50,7 @@
 	  		</div>
 	  	</div>
 	  </div>
-	  				<a href="{{ url('/form/'.$user->get()->name) }}" class="btn green accent-4">Yes, proceed</a>
+	  				<a type="submit" href="{{ url('/form/'.$user->get()->name) }}" class="btn green accent-4">Yes, proceed</a>
 
 	  				</center>
 	  @endif
