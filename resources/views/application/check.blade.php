@@ -50,10 +50,7 @@
 	  		</div>
 	  	</div>
 	  </div>
-	  			<form method="POST">
-	  				{{ csrf_field() }}<center>
-	  				<button type="submit" class="btn green accent-4">Yes, proceed</button>
-	  			</form>
+	  				<a href="{{ url('/form/'.$user->get()->name) }}" class="btn green accent-4">Yes, proceed</a>
 
 	  				</center>
 	  @endif
